@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ext-1",
+    "title": "Severe Flash Flood & Cloudburst Alert",
+    "type": "rainfall",
+    "level": "EXTREME",
+    "probability": 89,
+    "expectedMagnitude": "112.5 mm/h peak intensity",
+    "confidence": 91,
+    "affectedRegions": ["Odisha Coastal", "Puri", "Cuttack", "Balasore"],
+    "timeline": "Next 6 to 18 Hours",
+    "monitoringStatus": "HIGH ALERT — AUTOMATIC DISASTER CELL DISPATCH TRIGGERED",
+    "description": "Multi-model consensus (GraphCast 112mm, ECMWF 72mm, Blended 98mm) indicates extreme moisture convergence and dangerous urban/riverine flash flood potential."
+  },
+  {
+    "id": "ext-2",
+    "title": "Severe Heat Wave Warning",
+    "type": "heatwave",
+    "level": "HIGH RISK",
+    "probability": 84,
+    "expectedMagnitude": "44.5 °C peak ground temp (+5.2°C anomaly)",
+    "confidence": 94,
+    "affectedRegions": ["Western Rajasthan", "Jodhpur", "Barmer", "Bikaner"],
+    "timeline": "Next 24 to 72 Hours",
+    "monitoringStatus": "ACTIVE ADVISORY — HEAT SAFETY PROTOCOL REQUIRED",
+    "description": "Upper-air heat dome locking extreme dry heat over western arid zone with night-time minimum temperatures failing to cool below 31°C."
+  },
+  {
+    "id": "ext-3",
+    "title": "Gale-Force Coastal Squall Signal",
+    "type": "wind",
+    "level": "ADVISORY",
+    "probability": 72,
+    "expectedMagnitude": "74 km/h sustained gusts",
+    "confidence": 83,
+    "affectedRegions": ["Gujarat Coast", "Gulf of Khambhat", "Porbandar"],
+    "timeline": "Next 12 to 36 Hours",
+    "monitoringStatus": "MONITORING — FISHERMEN ADVISORY ISSUED",
+    "description": "Low-pressure trough development in North Arabian Sea driving gusty boundary layer winds across maritime shipping lanes."
+  },
+  {
+    "id": "ext-4",
+    "title": "Monsoon Inundation Watch",
+    "type": "rainfall",
+    "level": "WATCH",
+    "probability": 65,
+    "expectedMagnitude": "64 mm 24h accumulation",
+    "confidence": 78,
+    "affectedRegions": ["Kerala High Ranges", "Wayanad", "Idukki"],
+    "timeline": "Next 48 to 72 Hours",
+    "monitoringStatus": "ROUTINE TRACKING — SLOPE STABILITY ALERT",
+    "description": "Orograpic uplift along Western Ghats slope generating continuous moderate-to-heavy rainfall spells."
+  }
+]

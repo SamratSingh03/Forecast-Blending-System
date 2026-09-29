@@ -1,0 +1,47 @@
+[
+  {
+    "modelName": "ECMWF HRES (NWP-A)",
+    "category": "NWP",
+    "mae": 3.82,
+    "rmse": 5.14,
+    "bias": -0.42,
+    "skillScore": 0.88,
+    "reliability": 0.91
+  },
+  {
+    "modelName": "GFS Global (NWP-B)",
+    "category": "NWP",
+    "mae": 4.65,
+    "rmse": 6.28,
+    "bias": 1.15,
+    "skillScore": 0.79,
+    "reliability": 0.82
+  },
+  {
+    "modelName": "GraphCast / AIFS (AI)",
+    "category": "AI",
+    "mae": 3.12,
+    "rmse": 4.35,
+    "bias": 0.18,
+    "skillScore": 0.93,
+    "reliability": 0.89
+  },
+  {
+    "modelName": "Multi-Model Ensemble",
+    "category": "Ensemble",
+    "mae": 4.10,
+    "rmse": 5.40,
+    "bias": -0.10,
+    "skillScore": 0.84,
+    "reliability": 0.94
+  },
+  {
+    "modelName": "FORECASTBRIDGE Blended",
+    "category": "ForecastBridge",
+    "mae": 2.45,
+    "rmse": 3.28,
+    "bias": 0.02,
+    "skillScore": 0.96,
+    "reliability": 0.97
+  }
+]

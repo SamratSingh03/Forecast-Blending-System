@@ -1,0 +1,35 @@
+{
+  "rainfall": [
+    { "time": "00:00", "nwpa": 14.2, "nwpb": 18.5, "ai": 24.1, "ensemble": 18.9, "blended": 21.8, "observed": 22.0, "lowerBound": 16.5, "upperBound": 26.2 },
+    { "time": "03:00", "nwpa": 22.5, "nwpb": 28.0, "ai": 36.4, "ensemble": 29.0, "blended": 32.7, "observed": 33.5, "lowerBound": 27.1, "upperBound": 37.8 },
+    { "time": "06:00", "nwpa": 38.0, "nwpb": 45.2, "ai": 59.8, "ensemble": 47.7, "blended": 52.4, "observed": 51.0, "lowerBound": 44.0, "upperBound": 60.5 },
+    { "time": "09:00", "nwpa": 55.4, "nwpb": 68.1, "ai": 84.0, "ensemble": 69.2, "blended": 76.5, "observed": 75.8, "lowerBound": 66.0, "upperBound": 86.0 },
+    { "time": "12:00", "nwpa": 72.1, "nwpb": 89.4, "ai": 112.5, "ensemble": 91.3, "blended": 98.2, "observed": 96.5, "lowerBound": 85.0, "upperBound": 110.0 },
+    { "time": "15:00", "nwpa": 64.0, "nwpb": 76.2, "ai": 98.0, "ensemble": 79.4, "blended": 85.6, "observed": 84.0, "lowerBound": 72.0, "upperBound": 97.0 },
+    { "time": "18:00", "nwpa": 42.5, "nwpb": 51.0, "ai": 66.2, "ensemble": 53.2, "blended": 58.9, "observed": 57.5, "lowerBound": 48.0, "upperBound": 68.0 },
+    { "time": "21:00", "nwpa": 26.0, "nwpb": 32.4, "ai": 41.0, "ensemble": 33.1, "blended": 36.8, "observed": null, "lowerBound": 29.0, "upperBound": 44.0 },
+    { "time": "+24h", "nwpa": 18.0, "nwpb": 22.0, "ai": 28.5, "ensemble": 22.8, "blended": 25.1, "observed": null, "lowerBound": 18.0, "upperBound": 32.0 },
+    { "time": "+48h", "nwpa": 31.0, "nwpb": 41.5, "ai": 54.0, "ensemble": 42.2, "blended": 47.3, "observed": null, "lowerBound": 36.0, "upperBound": 58.0 },
+    { "time": "+72h", "nwpa": 48.2, "nwpb": 62.0, "ai": 79.5, "ensemble": 63.2, "blended": 70.1, "observed": null, "lowerBound": 55.0, "upperBound": 84.0 }
+  ],
+  "temperature": [
+    { "time": "00:00", "nwpa": 26.5, "nwpb": 26.0, "ai": 27.2, "ensemble": 26.6, "blended": 26.8, "observed": 26.9, "lowerBound": 25.8, "upperBound": 27.8 },
+    { "time": "03:00", "nwpa": 25.1, "nwpb": 24.8, "ai": 25.6, "ensemble": 25.2, "blended": 25.3, "observed": 25.4, "lowerBound": 24.5, "upperBound": 26.1 },
+    { "time": "06:00", "nwpa": 24.2, "nwpb": 23.9, "ai": 24.5, "ensemble": 24.2, "blended": 24.3, "observed": 24.4, "lowerBound": 23.6, "upperBound": 25.0 },
+    { "time": "09:00", "nwpa": 28.4, "nwpb": 28.1, "ai": 29.0, "ensemble": 28.5, "blended": 28.7, "observed": 28.6, "lowerBound": 27.8, "upperBound": 29.5 },
+    { "time": "12:00", "nwpa": 32.6, "nwpb": 33.1, "ai": 33.8, "ensemble": 33.2, "blended": 33.4, "observed": 33.5, "lowerBound": 32.2, "upperBound": 34.5 },
+    { "time": "15:00", "nwpa": 31.8, "nwpb": 32.2, "ai": 32.7, "ensemble": 32.2, "blended": 32.4, "observed": 32.3, "lowerBound": 31.2, "upperBound": 33.4 },
+    { "time": "18:00", "nwpa": 29.2, "nwpb": 29.0, "ai": 29.6, "ensemble": 29.3, "blended": 29.4, "observed": 29.5, "lowerBound": 28.5, "upperBound": 30.3 },
+    { "time": "21:00", "nwpa": 27.4, "nwpb": 27.1, "ai": 27.9, "ensemble": 27.5, "blended": 27.6, "observed": null, "lowerBound": 26.7, "upperBound": 28.5 }
+  ],
+  "wind": [
+    { "time": "00:00", "nwpa": 32.0, "nwpb": 28.5, "ai": 41.2, "ensemble": 33.9, "blended": 36.4, "observed": 37.0, "lowerBound": 30.0, "upperBound": 42.0 },
+    { "time": "03:00", "nwpa": 38.4, "nwpb": 34.0, "ai": 49.5, "ensemble": 40.6, "blended": 44.1, "observed": 45.2, "lowerBound": 36.0, "upperBound": 51.0 },
+    { "time": "06:00", "nwpa": 46.2, "nwpb": 41.8, "ai": 58.0, "ensemble": 48.7, "blended": 52.8, "observed": 54.0, "lowerBound": 44.0, "upperBound": 61.0 },
+    { "time": "09:00", "nwpa": 54.0, "nwpb": 49.5, "ai": 67.4, "ensemble": 57.0, "blended": 61.5, "observed": 62.1, "lowerBound": 52.0, "upperBound": 70.0 },
+    { "time": "12:00", "nwpa": 58.5, "nwpb": 52.0, "ai": 74.0, "ensemble": 61.5, "blended": 66.8, "observed": 67.5, "lowerBound": 57.0, "upperBound": 76.0 },
+    { "time": "15:00", "nwpa": 51.0, "nwpb": 45.2, "ai": 63.8, "ensemble": 53.3, "blended": 57.4, "observed": 56.8, "lowerBound": 48.0, "upperBound": 66.0 },
+    { "time": "18:00", "nwpa": 41.5, "nwpb": 37.0, "ai": 50.2, "ensemble": 42.9, "blended": 46.1, "observed": 45.5, "lowerBound": 38.0, "upperBound": 53.0 },
+    { "time": "21:00", "nwpa": 34.0, "nwpb": 30.2, "ai": 41.5, "ensemble": 35.2, "blended": 37.9, "observed": null, "lowerBound": 30.0, "upperBound": 44.0 }
+  ]
+}

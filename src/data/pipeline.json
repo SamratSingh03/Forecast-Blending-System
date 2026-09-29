@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "stepNumber": "01",
+    "title": "Ingesting Multi-Model Data",
+    "purpose": "Aggregates global NWP physics runs (ECMWF, GFS), AI neural models (GraphCast, AIFS), multi-model ensembles, and AWS surface station observations into a unified grid format.",
+    "inputs": ["ECMWF HRES GRIB2 (0.1°)", "GFS NOAA Grids", "AIFS / GraphCast NetCDF", "AWS Surface Stations", "INSAT-3D Satellite Radiance"],
+    "processing": "Spatial regridding to standard 0.1° x 0.1° WGS84 grid; temporal interpolation to 1-hour intervals.",
+    "output": "Standardized Tensor Matrix (Coordinates x LeadTime x Variables x Models).",
+    "keyTech": "Python xarray, cfgrib, GDAL, Apache Kafka ingestion stream",
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "stepNumber": "02",
+    "title": "Analyzing Historical Model Skill",
+    "purpose": "Evaluates recent 30-day and 90-day verification statistics (MAE, RMSE, CRPS, Threat Score) for each model across lead times and regional climate zones.",
+    "inputs": ["Standardized Model Tensors", "IMD AWS & Radar Gridded Observations"],
+    "processing": "Rolling verification metrics calculation over last 72h observations and historical climatology database.",
+    "output": "Dynamic Model Skill Vectors (S_nwpa, S_nwpb, S_ai, S_ens).",
+    "keyTech": "SciPy stats, Polars, DuckDB analytics engine",
+    "status": "completed"
+  },
+  {
+    "id": 3,
+    "stepNumber": "03",
+    "title": "Detecting Weather Regime",
+    "purpose": "Classifies the current atmospheric state into distinct synoptic regimes (e.g. Monsoon Trough, Heavy Convective, Heat Dome, High Wind, Extreme Anomaly).",
+    "inputs": ["850hPa Moisture Flux", "500hPa Geopotential Height", "CAPE / CIN", "Vorticity Index"],
+    "processing": "K-Means + XGBoost Classifier trained on 40 years of ERA5 reanalysis weather regimes.",
+    "output": "Current Weather Regime Classification & Probability Vector (P_regime = 87% Heavy Rainfall).",
+    "keyTech": "XGBoost, Scikit-learn, ERA5 Reanalysis Training Pipeline",
+    "status": "completed"
+  },
+  {
+    "id": 4,
+    "stepNumber": "04",
+    "title": "Calculating Dynamic Weights",
+    "purpose": "Assigns contextual weights to each model dynamically based on skill, regime fit, season, region, and lead time.",
+    "inputs": ["Model Skill Vectors", "Regime Probability Vector", "Lead Time Index", "Regional Climatology Matrix"],
+    "processing": "Bayesian Softmax Weighting Function: W_i = Softmax( α*Skill_i + β*RegimeFit_i + γ*RecentPerf_i ).",
+    "output": "Normalized Dynamic Model Weights (NWP-A: 39%, NWP-B: 22%, AI: 24%, Ensemble: 15%).",
+    "keyTech": "PyTorch tensor operations, Bayesian Updating Engine",
+    "status": "completed"
+  },
+  {
+    "id": 5,
+    "stepNumber": "05",
+    "title": "AI + NWP Blending Engine",
+    "purpose": "Executes weighted spatial-temporal fusion of numerical physics grids and deep learning neural predictions.",
+    "inputs": ["Dynamic Weights W_i", "Multi-Model Forecast Grids"],
+    "processing": "Convex combination matrix multiplication with spatial smoothing filter across boundary grids.",
+    "output": "Raw Blended Forecast Grid (Rainfall, Temp, Wind, Humidity, Pressure).",
+    "keyTech": "NumPy vectorize, Numba GPU acceleration",
+    "status": "completed"
+  },
+  {
+    "id": 6,
+    "stepNumber": "06",
+    "title": "Quantile-Based Bias Correction",
+    "purpose": "Corrects systematic over-estimation or under-estimation in extreme precipitation and peak temperature values.",
+    "inputs": ["Raw Blended Forecast Grid", "AWS Station Calibration Data"],
+    "processing": "Empirical Quantile Mapping (EQM) and elevation-lapse-rate local temperature adjustment.",
+    "output": "Bias-Corrected Blended Weather Fields.",
+    "keyTech": "Statsmodels, Quantile Mapping routines",
+    "status": "completed"
+  },
+  {
+    "id": 7,
+    "stepNumber": "07",
+    "title": "Physics-Informed Validation",
+    "purpose": "Verifies thermodynamic and hydro-dynamic physical law constraints to prevent unrealistic AI model outputs (hallucinations).",
+    "inputs": ["Bias-Corrected Blended Field"],
+    "processing": "Mass conservation check, hydrostatic equilibrium constraint, dewpoint non-exceedance test, wind continuity solver.",
+    "output": "Physics Validation Pass Matrix (or Anomaly Flag if unphysical).",
+    "keyTech": "Custom Physics Ruleset, Conservation Law Solvers",
+    "status": "completed"
+  },
+  {
+    "id": 8,
+    "stepNumber": "08",
+    "title": "Confidence & Spread Estimation",
+    "purpose": "Computes spatial variance, inter-model agreement percentage, and prediction uncertainty bounds.",
+    "inputs": ["Individual Model Forecasts", "Blended Output Grid"],
+    "processing": "Inter-model standard deviation analysis and ensemble spread entropy calculation.",
+    "output": "Forecast Confidence Index (88%) & Upper/Lower Uncertainty Bounds.",
+    "keyTech": "Entropy calculations, Probabilistic forecasting metrics",
+    "status": "completed"
+  },
+  {
+    "id": 9,
+    "stepNumber": "09",
+    "title": "Extreme Weather Check & Warning Dispatch",
+    "purpose": "Evaluates blended values against regional hazard thresholds (IMD Heavy Rainfall / Heat Wave criteria) to generate early warnings.",
+    "inputs": ["Blended Forecast Field", "Confidence Index", "Hazard Threshold Tables"],
+    "processing": "Threshold rule engine & risk matrix evaluation (WATCH, ADVISORY, HIGH RISK, EXTREME).",
+    "output": "Final ForecastBridge Intelligence Package & Disaster Alert GeoJSON.",
+    "keyTech": "Geopandas, Alert Engine, GeoJSON Formatter",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "id": "heavy_rain",
+    "name": "Heavy Rainfall Regime",
+    "confidence": 87,
+    "activeSince": "04 hours ago",
+    "detectionFactors": [
+      { "factor": "850 hPa Moisture Flux Convergence", "score": 0.94, "description": "Strong low-level jet transporting Bay of Bengal moisture into Odisha." },
+      { "factor": "Precipitable Water Anomaly", "score": 0.89, "description": "+2.4 standard deviations above climatological mean." },
+      { "factor": "Radar Echo Top Height", "score": 0.84, "description": "Sustained convective towers > 14 km." }
+    ],
+    "historicalFrequency": 18.4,
+    "description": "High convective moisture convergence producing localized extreme precipitation spikes.",
+    "recommendedModelPreference": "AI Model (GraphCast/AIFS) leads short-term mesoscale pattern recognition; NWP-A provides synoptic upper-air steering bounds."
+  },
+  {
+    "id": "monsoon",
+    "name": "Monsoon Trough Regime",
+    "confidence": 92,
+    "activeSince": "3 days ago",
+    "detectionFactors": [
+      { "factor": "Monsoon Trough Position", "score": 0.96, "description": "Trough line passing south of normal position." },
+      { "factor": "Low-Level Jet Velocity", "score": 0.91, "description": "Westerly winds over Arabian Sea exceeding 35 knots." },
+      { "factor": "Sea Surface Temperature Anomaly", "score": 0.88, "description": "Warm SST anomaly in Northern Bay of Bengal." }
+    ],
+    "historicalFrequency": 34.2,
+    "description": "Established monsoon flow with widespread stratiform and convective rain bands.",
+    "recommendedModelPreference": "NWP-A (ECMWF) leads synoptic trough positioning; Ensemble handles track uncertainty."
+  },
+  {
+    "id": "hailstorm",
+    "name": "Severe Hailstorm Regime",
+    "confidence": 89,
+    "activeSince": "02 hours ago",
+    "detectionFactors": [
+      { "factor": "Extreme CAPE / Severe Updraft", "score": 0.95, "description": "Convective Available Potential Energy exceeding 3500 J/kg." },
+      { "factor": "Freezing Level Altitude Anomaly", "score": 0.91, "description": "Sub-zero isotherm lowered with strong vertical wind shear." },
+      { "factor": "Differential Reflectivity (ZDR) Drop", "score": 0.88, "description": "Polarimetric radar signals large hail core in supercell." }
+    ],
+    "historicalFrequency": 5.4,
+    "description": "Supercell convective updrafts creating rapid frozen hail stone growth and ground impact.",
+    "recommendedModelPreference": "AI Model leads micro-convective updraft detection; NWP-A provides thermodynamics."
+  },
+  {
+    "id": "snow_blizzard",
+    "name": "Snow & Blizzard Regime",
+    "confidence": 91,
+    "activeSince": "06 hours ago",
+    "detectionFactors": [
+      { "factor": "Western Disturbance Jet Streak", "score": 0.96, "description": "Deep mid-latitude trough crossing Jammu, Kashmir & Himachal." },
+      { "factor": "Sub-Zero Surface Temperature", "score": 0.93, "description": "Freezing air mass with heavy 700hPa moisture advection." },
+      { "factor": "Orographic Wind Uplift", "score": 0.89, "description": "High-altitude Himalayan slope uplifting freezing moisture." }
+    ],
+    "historicalFrequency": 8.7,
+    "description": "High-altitude freezing precipitation and blizzard-force mountain winds.",
+    "recommendedModelPreference": "ECMWF NWP-A high-resolution microphysics leads snow accumulation accuracy."
+  },
+  {
+    "id": "sandstorm",
+    "name": "Sandstorm & Dust Storm Regime",
+    "confidence": 86,
+    "activeSince": "03 hours ago",
+    "detectionFactors": [
+      { "factor": "Convective Pre-Frontal Downdraft", "score": 0.92, "description": "Cold pool gust front sweeping dry desert topsoil." },
+      { "factor": "Surface Dust Aerosol Index (AOD)", "score": 0.94, "description": "MODIS/INSAT dust index exceeding 3.8 standard deviations." },
+      { "factor": "Visibility Suppression (<500m)", "score": 0.87, "description": "Severe atmospheric dust loading causing zero-visibility conditions." }
+    ],
+    "historicalFrequency": 6.2,
+    "description": "High-speed dry boundary layer winds lifting particulate dust/sand over arid plains.",
+    "recommendedModelPreference": "GFS NWP-B boundary layer wind shear + AI satellite dust aerosol tracking."
+  },
+  {
+    "id": "heatwave",
+    "name": "Severe Heat Wave Regime",
+    "confidence": 94,
+    "activeSince": "2 days ago",
+    "detectionFactors": [
+      { "factor": "500 hPa Geopotential Height Ridge", "score": 0.97, "description": "Persistent anti-cyclonic dome blocking cloud cover over Thar Desert." },
+      { "factor": "850 hPa Temp Anomaly", "score": 0.92, "description": "+4.8°C above normal over Rajasthan & North-Western Plains." },
+      { "factor": "Soil Moisture Deficit", "score": 0.90, "description": "Surface dry air heating with 5% soil moisture." }
+    ],
+    "historicalFrequency": 12.1,
+    "description": "Atmospheric subsidence heat dome creating extreme ground temperatures.",
+    "recommendedModelPreference": "ECMWF NWP-A and AI models show high correlation; AI model weight increased for 2m temperature lag."
+  },
+  {
+    "id": "highwind",
+    "name": "High Wind & Squall Regime",
+    "confidence": 81,
+    "activeSince": "08 hours ago",
+    "detectionFactors": [
+      { "factor": "Pressure Gradient Shear", "score": 0.88, "description": "Steep localized surface pressure gradient along Gulf of Kutch." },
+      { "factor": "Low-Level Jet Shear", "score": 0.82, "description": "Gust potential exceeding 65 km/h at 925 hPa." }
+    ],
+    "historicalFrequency": 9.5,
+    "description": "Boundary layer wind shear causing coastal wind gusts and severe turbulence.",
+    "recommendedModelPreference": "GFS NWP-B handles coastal surface boundary layer shear well; Ensemble provides gust envelope."
+  },
+  {
+    "id": "normal",
+    "name": "Normal / Climatological Regime",
+    "confidence": 76,
+    "activeSince": "12 hours ago",
+    "detectionFactors": [
+      { "factor": "Atmospheric Stability Index", "score": 0.75, "description": "CAPE values within seasonal baseline." },
+      { "factor": "No Strong Vorticity Drivers", "score": 0.78, "description": "Quasi-geostrophic balance across Central India." }
+    ],
+    "historicalFrequency": 25.8,
+    "description": "Standard seasonal weather patterns without extreme pressure or moisture anomalies.",
+    "recommendedModelPreference": "Equal baseline weighting across NWP and AI models with high ensemble consensus."
+  },
+  {
+    "id": "extreme",
+    "name": "Extreme / Unprecedented Anomaly",
+    "confidence": 98,
+    "activeSince": "01 hour ago",
+    "detectionFactors": [
+      { "factor": "Historical Out-of-Distribution Index", "score": 0.99, "description": "Combined wind and rainfall pressure anomaly exceeds 99.9th percentile." },
+      { "factor": "Model Divergence Score", "score": 0.95, "description": "Extreme divergence between AI neural weather model and NWP physics dynamics." }
+    ],
+    "historicalFrequency": 0.8,
+    "description": "Out-of-distribution meteorology triggering ForecastBridge Physics Override & NWP Safeguard.",
+    "recommendedModelPreference": "AUTOMATIC OVERRIDE ACTIVE: AI model weight reduced to 10%, NWP Physics Baseline boosted to 48%, Physics Constraints strictly enforced."
+  }
+]

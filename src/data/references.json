@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ref-ecmwf-aifs",
+    "title": "ECMWF Artificial Intelligence Forecasting System (AIFS)",
+    "organization": "European Centre for Medium-Range Weather Forecasts (ECMWF)",
+    "year": 2024,
+    "url": "https://www.ecmwf.int/en/forecasts/dataset/artificial-intelligence-forecasting-system",
+    "demonstrates": "Demonstrates data-driven ML models achieving skill comparable to traditional HRES physics-based NWP systems at 1/10,000th computational cost during inference.",
+    "howUsed": "ForecastBridge incorporates AIFS output as a primary AI model stream in short-to-medium range lead-time weighting matrices."
+  },
+  {
+    "id": "ref-noaa-ncar-ai",
+    "title": "NOAA & NCAR AI for Weather & Climate Prediction",
+    "organization": "NOAA National Centers for Environmental Information / NCAR",
+    "year": 2023,
+    "url": "https://www.noaa.gov/ai",
+    "demonstrates": "Establishes hybrid physics-AI post-processing standards, quantile mapping for extreme precipitation, and ensemble uncertainty bounds.",
+    "howUsed": "ForecastBridge applies NOAA/NCAR bias correction routines and quantile mapping logic in Stage 06 of the blending pipeline."
+  },
+  {
+    "id": "ref-imd-moes",
+    "title": "India Meteorological Department (IMD) Multi-Model Ensemble Framework",
+    "organization": "Ministry of Earth Sciences (MoES), Government of India",
+    "year": 2023,
+    "url": "https://mausam.imd.gov.in/",
+    "demonstrates": "Provides operational Indian tropical monsoon climatology baselines, regional hazard thresholds for flash floods and heat waves, and district-level warning criteria.",
+    "howUsed": "ForecastBridge uses IMD regional hazard criteria to trigger WATCH, ADVISORY, HIGH RISK, and EXTREME alerts."
+  },
+  {
+    "id": "ref-deepmind-graphcast",
+    "title": "Learning Skillful Medium-Range Weather Forecasting (GraphCast)",
+    "organization": "Google DeepMind / Science Journal",
+    "year": 2023,
+    "url": "https://www.science.org/doi/10.1126/science.adi2336",
+    "demonstrates": "Proves graph neural networks trained on ERA5 reanalysis outperform top deterministic NWP models on 90%+ of atmospheric variables.",
+    "howUsed": "ForecastBridge leverages GraphCast's mesoscale feature extraction concepts to detect weather regimes dynamically."
+  }
+]

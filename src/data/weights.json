@@ -1,0 +1,61 @@
+{
+  "defaultWeights": [
+    {
+      "modelId": "nwpa",
+      "modelName": "ECMWF HRES (NWP-A)",
+      "type": "NWP",
+      "weight": 39,
+      "previousWeight": 35,
+      "color": "#3B82F6",
+      "historicalSkill": 0.88,
+      "regimeFit": 0.85
+    },
+    {
+      "modelId": "nwpb",
+      "modelName": "GFS Global (NWP-B)",
+      "type": "NWP",
+      "weight": 22,
+      "previousWeight": 25,
+      "color": "#06B6D4",
+      "historicalSkill": 0.79,
+      "regimeFit": 0.74
+    },
+    {
+      "modelId": "ai",
+      "modelName": "GraphCast / AIFS (AI)",
+      "type": "AI",
+      "weight": 24,
+      "previousWeight": 18,
+      "color": "#8B5CF6",
+      "historicalSkill": 0.91,
+      "regimeFit": 0.94
+    },
+    {
+      "modelId": "ensemble",
+      "modelName": "Multi-Model Ensemble",
+      "type": "Ensemble",
+      "weight": 15,
+      "previousWeight": 22,
+      "color": "#10B981",
+      "historicalSkill": 0.84,
+      "regimeFit": 0.80
+    }
+  ],
+  "weightByLeadTime": [
+    { "leadTime": "Now (0h)", "nwpa": 32, "nwpb": 20, "ai": 36, "ensemble": 12 },
+    { "leadTime": "6h", "nwpa": 35, "nwpb": 22, "ai": 31, "ensemble": 12 },
+    { "leadTime": "12h", "nwpa": 38, "nwpb": 22, "ai": 26, "ensemble": 14 },
+    { "leadTime": "24h", "nwpa": 40, "nwpb": 23, "ai": 22, "ensemble": 15 },
+    { "leadTime": "48h", "nwpa": 39, "nwpb": 24, "ai": 18, "ensemble": 19 },
+    { "leadTime": "72h", "nwpa": 36, "nwpb": 25, "ai": 14, "ensemble": 25 },
+    { "leadTime": "7d", "nwpa": 30, "nwpb": 25, "ai": 10, "ensemble": 35 }
+  ],
+  "heatMapMatrix": [
+    { "regime": "Normal", "nwpa": 35, "nwpb": 25, "ai": 25, "ensemble": 15 },
+    { "regime": "Monsoon", "nwpa": 42, "nwpb": 20, "ai": 22, "ensemble": 16 },
+    { "regime": "Heavy Rainfall", "nwpa": 32, "nwpb": 18, "ai": 38, "ensemble": 12 },
+    { "regime": "Heat Wave", "nwpa": 38, "nwpb": 24, "ai": 26, "ensemble": 12 },
+    { "regime": "High Wind", "nwpa": 36, "nwpb": 26, "ai": 20, "ensemble": 18 },
+    { "regime": "Extreme/Unusual", "nwpa": 48, "nwpb": 22, "ai": 10, "ensemble": 20 }
+  ]
+}
