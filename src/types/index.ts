@@ -1,11 +1,13 @@
-export type PageId = 
+export type PageId =
   | 'landing'
-  | 'command' 
-  | 'forecast' 
-  | 'explainability' 
-  | 'regime' 
-  | 'extreme' 
-  | 'pipeline' 
+  | 'command'
+  | 'forecast'
+  | 'explainability'
+  | 'regime'
+  | 'weights'
+  | 'pipeline'
+  | 'confidence'
+  | 'extreme'
   | 'impact';
 
 export type LeadTime = 'Now' | '6h' | '12h' | '24h' | '48h' | '72h' | '7d';
